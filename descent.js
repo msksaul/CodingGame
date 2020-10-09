@@ -10,20 +10,19 @@ let testArray = [0,6,0,5,0,8,0,6]
 while (true) {
   let maxValue = null
   let maxIndex = null
-  let mountain = []
     for (let i = 0; i < 8; i++) {
-        const mountainH = testArray; // represents the height of one mountain.
-        mountain = mountainH
+        const mountainH = parseInt(readline()); // represents the height of one mountain.
           if (maxValue) {
-              if(mountainH[i] > maxValue) {
-                  maxValue = mountainH[i]
+              if(mountainH > maxValue) {
+                  maxValue = mountainH
+                  maxIndex = i
               }
           }
           else {
-              maxValue = mountainH[i]
+              maxValue = mountainH
+              maxIndex = i
           }
     }
-    maxIndex = mountain.indexOf(maxValue)
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
     console.log(maxIndex)
